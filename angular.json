@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SweetDreamsFrontEnd"
+    }
+  },
+  "defaultProject": "SweetDreamsFrontEnd",
+  "cli": {
+    "analytics": "5723a8bf-97c4-422f-9716-c22c0f87a63b"
+  }
 }

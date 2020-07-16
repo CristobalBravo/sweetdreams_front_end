@@ -1,0 +1,29 @@
+<app-nav-bar-cliente></app-nav-bar-cliente>
+<br>
+<div class="container">
+    <table class="table fade-in">
+        <thead>
+            <tr>
+                <th class="text-center">Rut</th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Apellido</th>
+                <th class="text-center">Direccion</th>
+                <th class="text-center">Correo</th>
+                <th class="text-center">Telefono</th>
+                <th class="text-center">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes; let i=index ">
+                <td class="text-center">{{ cliente.rut }}</td>
+                <td class="text-center">{{ cliente.nombre }}</td>
+                <td class="text-center">{{ cliente.apellido }}</td>
+                <td class="text-center">{{ cliente.direccion }}</td>
+                <td class="text-center">{{ cliente.correo }}</td>
+                <td class="text-center">{{ cliente.telefono }}</td>
+                <td class="text-center"><button (click)="eliminar(cliente, i)" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
