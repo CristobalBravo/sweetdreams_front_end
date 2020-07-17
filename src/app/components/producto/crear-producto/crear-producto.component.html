@@ -1,0 +1,27 @@
+<app-nav-bar-producto></app-nav-bar-producto>
+<br>
+<div class="container fade-in">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nombre Producto</label>
+            <input type="text" class="form-control" #nombreP aria-describedby="emailHelp" placeholder="Ingrese el nombre del producto">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Descripcion</label>
+            <input type="text" class="form-control" #descripcion aria-describedby="emailHelp" placeholder="Ingrese su descripcion">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Categoria</label>
+            <input type="text" class="form-control" #categoria aria-describedby="emailHelp" placeholder="Ingrese su categoria">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Precio</label>
+            <input type="number" class="form-control" #precio aria-describedby="emailHelp" placeholder="Ingrese su precio">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Stock</label>
+            <input type="number" class="form-control" #stock aria-describedby="emailHelp" placeholder="ingrese la cantidad">
+        </div>
+        <button (click)="guardar(nombreP.value,descripcion.value,categoria.value,precio.value,stock.value)" type="button" class="btn btn-primary">Crear  <i class="fa fa-paperclip" aria-hidden="true"></i></button>
+    </form>
+</div>

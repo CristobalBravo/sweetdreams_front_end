@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { ClienteModels } from '../models/cliente.models';
 
-
-
 @Injectable({
   providedIn: 'root'
 })

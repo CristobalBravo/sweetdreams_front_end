@@ -1,0 +1,26 @@
+<app-nav-bar-producto></app-nav-bar-producto>
+<br>
+<div class="container">
+    <table class="table fade-in">
+        <thead>
+            <tr>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Descripción</th>
+                <th class="text-center">Categoria</th>
+                <th class="text-center">Precio</th>
+                <th class="text-center">Stock</th>
+                <th class="text-center">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of Productos; let i=index ">
+                <td class="text-center">{{ producto.nombreP }}</td>
+                <td class="text-center">{{ producto.descripcion }}</td>
+                <td class="text-center">{{ producto.categoria }}</td>
+                <td class="text-center">{{ producto.precio }}</td>
+                <td class="text-center">{{ producto.stock }}</td>
+                <td class="text-center"><button (click)="eliminar(producto, i)" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

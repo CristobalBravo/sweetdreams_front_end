@@ -11,6 +11,9 @@ import { CrearComponent } from './components/cliente/crear/crear.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ListarComponent } from './components/producto/listar/listar.component';
+import { CrearProductoComponent } from './components/producto/crear-producto/crear-producto.component';
+import { NavBarProductoComponent } from './components/producto/nav-bar-producto/nav-bar-producto.component';
 
 
 
@@ -22,7 +25,10 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     ClientesComponent,
     NavBarClienteComponent,
-    CrearComponent
+    CrearComponent,
+    ListarComponent,
+    CrearProductoComponent,
+    NavBarProductoComponent
   ],
   imports: [
     BrowserModule,
