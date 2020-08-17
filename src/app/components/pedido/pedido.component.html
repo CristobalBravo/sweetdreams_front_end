@@ -1,0 +1,49 @@
+<app-nav-bar-pedido></app-nav-bar-pedido>
+
+<div class="container fade-in">
+    <div class="row mt">
+        <div class="col">
+            <label>Ingrese Una Fecha</label>
+            <input class="form-control" type="date" #fecha placeholder="Ingrese Una Fecha">
+        </div>
+        <div class=" col ">
+            <label><br></label><br>
+            <button (click)="buscar(fecha.value)" type="button" class="btn btn-primary "> <i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="!buscado" class="container ">
+        <table class="table fade-in ">
+            <thead>
+                <tr>
+                    <th class="text-center ">Fecha Entrega</th>
+                    <th class="text-center ">Total Pedido</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pedido of pedidos; let i=index ">
+                    <td class="text-center ">{{ pedido.fechaEntrega | date }}</td>
+                    <td class="text-center "><a type="button" (click)="detalle(pedido.idPedido)" class="b navbar-brand">{{ pedido.totalPedido }}</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="buscado" class="container ">
+        <table class="table fade-in ">
+            <thead>
+                <tr>
+                    <th class="text-center ">Fecha Entrega</th>
+                    <th class="text-center ">Total Pedido</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let fecha of fechasEncontradas; let i=index ">
+                    <td class="text-center ">{{ fecha.fechaEntrega | date}}</td>
+                    <td class="text-center "><a type="button" (click)="detalle(fecha.idPedido)" class="b navbar-brand">{{ fecha.totalPedido }}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

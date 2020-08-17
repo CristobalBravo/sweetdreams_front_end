@@ -1,4 +1,5 @@
 import { PedidoModels } from '../models/Pedido.models';
+import { VentaModels } from './venta.models';
 
 export class ProductoModels{
   idProducto:number;
@@ -7,6 +8,5 @@ export class ProductoModels{
   categoria:string;
   precio:number;
   stock:number;
-  pedido:PedidoModels;
-
+  venta: VentaModels[];
 }

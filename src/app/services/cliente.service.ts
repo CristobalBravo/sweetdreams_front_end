@@ -33,4 +33,8 @@ export class ClienteService {
   public deleted($id){
     return  this.http.delete(`${this.url}/${$id}`);
   }
+
+  public buscarPorRut(rut){
+    return this.http.get(`${this.url}/rut/${rut}`);
+  }
 }

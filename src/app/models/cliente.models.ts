@@ -1,3 +1,4 @@
+import { PedidoModels } from './Pedido.models';
 export class ClienteModels{
   id_Cliente:number;
   nombre:string;
@@ -6,5 +7,5 @@ export class ClienteModels{
   direccion:string;
   telefono:string;
   rut:string;
-  pedido:[];
+  pedido:PedidoModels[];
 }

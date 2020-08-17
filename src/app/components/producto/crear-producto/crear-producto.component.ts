@@ -24,7 +24,7 @@ export class CrearProductoComponent implements OnInit {
     this.producto.categoria=categoria;
     this.producto.precio=precio;
     this.producto.stock=stock;
-    this.producto.pedido=null;
+    //this.producto.pedido=null;
     console.log(this.producto)
 
     Swal.fire({
@@ -36,7 +36,7 @@ export class CrearProductoComponent implements OnInit {
         this.service.create(this.producto).subscribe(resp=>{
           console.log(resp)
         });
-        this.router.navigateByUrl('/producto/listar')
+        this.router.navigateByUrl('/productos/listar')
       }
     });
   }

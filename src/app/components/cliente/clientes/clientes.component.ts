@@ -15,6 +15,7 @@ export class ClientesComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAll().subscribe(resp =>{
+      console.log(resp);
       this.clientes=resp;
     })
 
